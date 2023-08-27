@@ -9,7 +9,6 @@ import java.util.concurrent.Executors;
 public class EchoServer {
 
     public static void main(String[] args) throws IOException {
-        // TODO Task 2b)
 
         int PORT = 1024;
         Executors.newFixedThreadPool(2);

@@ -41,9 +41,11 @@ public class Vector {
 	 */
 	public double dot(Vector v) {
 
-		// TODO Task 3a)
-
-		return 0;
+		double sum = 0;
+		for (int i = 0; i < v.p.length; i++) {
+			sum += this.p[i] * v.p[i];
+		}
+		return sum;
 	}
 
 	/**
@@ -55,8 +57,12 @@ public class Vector {
 	public Vector add(Vector v) {
 
 		// TODO Task 3a)
+		Vector newVector = new Vector(this.p.length);
 
-		return null;
+		for (int i = 0; i < v.p.length; i++) {
+			newVector.p[i] = this.p[i] + v.p[i];
+		}
+		return newVector;
 	}
 
 	/**
@@ -67,9 +73,12 @@ public class Vector {
 	 */
 	public Vector mult(double s) {
 
-		// TODO Task 3a)
+		Vector newVector = new Vector(this.p.length);
 
-		return null;
+		for (int i = 0; i < this.p.length; i++) {
+			newVector.p[i] = this.p[i] * s;
+		}
+		return newVector;
 	}
 
 }
