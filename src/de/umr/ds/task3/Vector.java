@@ -56,7 +56,6 @@ public class Vector {
 	 */
 	public Vector add(Vector v) {
 
-		// TODO Task 3a)
 		Vector newVector = new Vector(this.p.length);
 
 		for (int i = 0; i < v.p.length; i++) {

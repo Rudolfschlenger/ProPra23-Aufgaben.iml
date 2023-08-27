@@ -6,8 +6,13 @@ package de.umr.ds.task3;
  */
 public class Perceptron {
 
-	// TODO Task 3b)
+    Vector weightVector;
+    double bias;
 
+    public Perceptron() {
+        weightVector = new Vector(Math.random(), Math.random());
+        this.bias = Math.random();
+    }
 
     /**
      * Apply the perceptron to classify a data vector.
@@ -17,8 +22,6 @@ public class Perceptron {
      */
     public int predict(Vector x) {
 
-        // TODO Task 3b)
-
-        return 0;
+        return weightVector.dot(x) + bias > 0 ? 1 : 0;
     }
 }
