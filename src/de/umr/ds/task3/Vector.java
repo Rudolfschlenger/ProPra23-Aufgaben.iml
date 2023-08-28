@@ -56,7 +56,7 @@ public class Vector {
 	 */
 	public Vector add(Vector v) {
 
-		Vector newVector = new Vector(this.p.length);
+		Vector newVector = new Vector(0, 0);
 
 		for (int i = 0; i < v.p.length; i++) {
 			newVector.p[i] = this.p[i] + v.p[i];
@@ -72,7 +72,7 @@ public class Vector {
 	 */
 	public Vector mult(double s) {
 
-		Vector newVector = new Vector(this.p.length);
+		Vector newVector = new Vector(0, 0);
 
 		for (int i = 0; i < this.p.length; i++) {
 			newVector.p[i] = this.p[i] * s;

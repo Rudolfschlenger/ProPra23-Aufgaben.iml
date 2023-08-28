@@ -10,9 +10,15 @@ public class Evaluation {
 	 */
 	public static double accuracy(Perceptron model, Dataset dataset) {
 		
-		// TODO Task 3d)
+		double correct = 0;
+
+		for (int i = 0; i < dataset.size(); i++) {
+			if (model.predict(dataset.get(i)) == dataset.get(i).getLabel()) {
+				correct++;
+			}
+		}
 		
-		return 0;
+		return correct / dataset.size();
 	}
 
 }
